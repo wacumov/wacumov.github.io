@@ -5,6 +5,7 @@ try MikhailAkopov().publish(
         .optional(.copyResources()),
         .addMarkdownFiles(),
         .sortItems(by: \.date, order: .descending),
+        .installPlugin(.addPrivacyPolicies()),
         .generateHTML(withTheme: .maTheme),
         .generateSiteMap(),
     ],
