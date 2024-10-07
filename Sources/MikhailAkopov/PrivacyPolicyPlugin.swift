@@ -13,7 +13,7 @@ extension Plugin {
 }
 
 private extension Page {
-    static func makePrivacyPolicyPage<Site: Website>(_ item: Item<Site>) -> Self {
+    static func makePrivacyPolicyPage(_ item: Item<some Website>) -> Self {
         let title = "\(item.title) Privacy Policy"
         let content = Content(title: title, body: .makePrivacyPolicy(item.title))
         return Page(path: "\(item.path)/privacy-policy", content: content)
