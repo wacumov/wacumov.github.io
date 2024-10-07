@@ -18,7 +18,7 @@ jobs:
       run: |
         git clone https://github.com/JohnSundell/Publish.git
         cd Publish
-        make
+        make install
 
     - name: Generate Site
       run: publish generate
