@@ -1,12 +1,12 @@
 ---
-description: You can make a beat in seconds and a loop in a minute with “Loop it”.
+description: With this app, you can create a beat in seconds and a loop in under a minute.
 icon: loopit-icon-180.png
 appid: 979117778
 categories: music
 sortOrder: 10
 ---
-# Loop it!
+# Beat Maker
 
-You can make a beat in seconds and a loop in a minute with “Loop it”. It's the easiest app for creating music ever made.
+With this app, you can create a beat in seconds and a loop in under a minute.
 
-“Loop it” is easy to use for non-musicians and useful for professionals.
+It's the simplest music-making app ever made - perfect for beginners and powerful enough for professionals.
