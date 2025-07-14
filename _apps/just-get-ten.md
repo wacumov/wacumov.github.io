@@ -2,7 +2,7 @@
 description: The game where super simple becomes devilishly difficult.
 icon: just-get-ten-icon-180.png
 appid: 1070851284
-categories: games, puzzle
+categories: [games, puzzle]
 sortOrder: 4
 ---
 # Just get 10

@@ -2,7 +2,7 @@
 description: Turn the color wheel and jump!
 icon: bouncy-colors-icon-180.png
 appid: 1056926128
-categories: games, arcade
+categories: [games, arcade]
 sortOrder: 4
 ---
 # Bouncy colors
