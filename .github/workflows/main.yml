@@ -1,29 +1,26 @@
-name: main
+name: Deploy
 
 on:
   push:
     branches:
-    - main
+      - main
 
 jobs:
   gh-pages:
-    runs-on: macos-15
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout
       uses: actions/checkout@v4
-        
-    - name: Build Publish
+    - name: Build
       run: |
-        git clone https://github.com/JohnSundell/Publish.git
-        cd Publish
-        make install
-
-    - name: Generate Site
-      run: publish generate
-
+        docker run \
+        -v ${{ github.workspace }}:/srv/jekyll \
+        -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+        jekyll/builder:latest \
+        /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./Output
+        publish_dir: _site
