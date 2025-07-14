@@ -1,4 +1,5 @@
 ---
+title: Pros and Cons
 description: Simple yet powerful decision helper. 
 icon: pros-and-cons-icon-180.png
 appid: 668357845

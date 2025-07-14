@@ -1,4 +1,5 @@
 ---
+title: Clocks and Blocks
 description: Tap to shoot and destroy the blocks.
 icon: clocks-and-blocks-icon-180.png
 appid: 1079357688

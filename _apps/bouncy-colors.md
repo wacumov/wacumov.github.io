@@ -1,4 +1,5 @@
 ---
+title: Bouncy Colors
 description: Turn the color wheel and jump!
 icon: bouncy-colors-icon-180.png
 appid: 1056926128

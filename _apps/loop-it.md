@@ -1,4 +1,5 @@
 ---
+title: Loop It
 description: With this app, you can create a beat in seconds and a loop in under a minute.
 icon: loopit-icon-180.png
 appid: 979117778

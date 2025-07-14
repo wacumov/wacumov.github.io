@@ -1,4 +1,5 @@
 ---
+title: Filki
 description: A simple application for account of personal expenses and income.
 icon: filki-icon-180.png
 appid: 488541859

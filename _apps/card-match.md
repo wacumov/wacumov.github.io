@@ -1,4 +1,5 @@
 ---
+title: Card Match
 description: Merge cards in any direction to reach new highs!
 icon: card-match-icon-180.png
 appid: 6743237477

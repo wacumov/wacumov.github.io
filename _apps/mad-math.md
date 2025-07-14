@@ -1,4 +1,5 @@
 ---
+title: Mad Math
 description: In this game you need to solve arithmetic tasks quickly.
 icon: mad-math-icon-180.png
 appid: 1050158206
