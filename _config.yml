@@ -1,0 +1,24 @@
+
+title: Mikhail Akopov
+description: An iOS developer's personal website.
+url: https://wacumov.github.io
+
+social_links:
+  - name: "github"
+    url: "https://github.com/wacumov"
+  - name: "linkedin"
+    url: "https://www.linkedin.com/in/mikhail-akopov-ios"
+  - name: "twitter"
+    url: "https://twitter.com/Wacumov"
+
+collections:
+  apps:
+    output: true
+    permalink: /:name
+
+defaults:
+  - scope:
+      path: ""
+      type: "apps"
+    values:
+      layout: "app"
