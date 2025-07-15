@@ -1,29 +1,31 @@
-name: main
+name: Deploy
 
 on:
   push:
     branches:
-    - main
+      - main
 
 jobs:
   gh-pages:
-    runs-on: macos-15
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout
       uses: actions/checkout@v4
-        
-    - name: Build Publish
-      run: |
-        git clone https://github.com/JohnSundell/Publish.git
-        cd Publish
-        make install
 
-    - name: Generate Site
-      run: publish generate
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 3.4.1
+        bundler-cache: true
+
+    - name: Build
+      run: |
+        bundle exec jekyll build
+        make generate-privacy-policies
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./Output
+        publish_dir: _site

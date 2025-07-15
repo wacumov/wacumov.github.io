@@ -1,0 +1,12 @@
+<footer>
+  <ul class="social-links-list">
+    {% for link in site.social_links %}
+      <li class="social-link">
+        <a href="{{ link.url }}">{{ link.name }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  <p class="generated-using">
+    Generated using <a href="https://jekyllrb.com/">Jekyll</a>
+  </p>
+</footer>
