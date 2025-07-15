@@ -20,6 +20,8 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
+  - Makefile
+  - generate-privacy-policies.sh
 
 defaults:
   - scope:
