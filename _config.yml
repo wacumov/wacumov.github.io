@@ -16,6 +16,11 @@ collections:
     output: true
     permalink: /:name
 
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
 defaults:
   - scope:
       path: ""
