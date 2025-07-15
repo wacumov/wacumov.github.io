@@ -22,6 +22,8 @@ exclude:
   - Gemfile.lock
   - Makefile
   - generate-privacy-policies.sh
+  - vendor
+  - gems_cache
 
 defaults:
   - scope:

@@ -21,6 +21,8 @@ jobs:
 
     - name: Build
       run: |
+        bundle config set --local path 'gems_cache'
+        bundle install
         bundle exec jekyll build
         make generate-privacy-policies
 
