@@ -14,7 +14,7 @@ social_links:
 collections:
   apps:
     output: true
-    permalink: /:name
+    permalink: /apps/:name
 
 exclude:
   - README.md
