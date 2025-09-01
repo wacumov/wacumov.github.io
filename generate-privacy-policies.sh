@@ -16,7 +16,7 @@ for app_file in "$APPS_DIR"/*.md; do
     FINAL_HTML=$(sed -e "s/{{ page.title }}/$APP_TITLE/g" \
                    -e '/^---$/,/^---$/d' "$PRIVACY_POLICY_LAYOUT")
 
-    OUTPUT_DIR="$SITE_DIR/$APP_SLUG/privacy-policy"
+    OUTPUT_DIR="$SITE_DIR/apps/$APP_SLUG/privacy-policy"
     mkdir -p "$OUTPUT_DIR"
     printf "%s" "$FINAL_HTML" > "$OUTPUT_DIR/index.html"
 done
