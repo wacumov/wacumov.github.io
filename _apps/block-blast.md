@@ -3,6 +3,7 @@ title: Block Blast
 description: Exciting and addicting classic puzzle game.
 icon: block-blast-icon-180.png
 appid: 6736466242
+android_appid: com.wacumov.blockblast
 categories: games
 sortOrder: 12
 ---
