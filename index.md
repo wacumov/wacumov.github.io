@@ -25,9 +25,16 @@ title: Apps
           <div class="card-text">
             <p>{{ app.description }}</p>
           </div>
-          <a href="https://apps.apple.com/app/id{{ app.appid }}">
-            <img class="app-store-badge" src="/assets/images/app-store-badge.svg" alt="Download on the App Store">
-          </a>
+          <div class="app-badges">
+            <a href="https://apps.apple.com/app/id{{ app.appid }}">
+              <img class="app-store-badge" src="/assets/images/app-store-badge.svg" alt="Download on the App Store">
+            </a>
+            {% if app.android_appid %}
+            <a href="https://play.google.com/store/apps/details?id={{ app.android_appid }}">
+              <img class="google-play-badge" src="/assets/images/google-play-badge.svg" alt="Get it on Google Play">
+            </a>
+            {% endif %}
+          </div>
         </div>
       </div>
     </li>
