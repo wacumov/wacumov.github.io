@@ -219,11 +219,30 @@ a {
     font-size: 0.6em;
 }
 
+.app-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.app-badges a {
+    cursor: pointer;
+}
+
+.app-badges a:hover {
+    opacity: 0.9;
+}
+
 .app-store-badge {
     width: 196px;
     height: 58px;
-    margin-top: 10px;
-    margin-left: -10px;
+}
+
+.google-play-badge {
+    width: 196px;
+    height: auto;
 }
 
 footer {
