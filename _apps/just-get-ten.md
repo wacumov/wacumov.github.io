@@ -3,6 +3,7 @@ title: Just Get Ten
 description: The game where super simple becomes devilishly difficult.
 icon: just-get-ten-icon-180.png
 appid: 1070851284
+has_appodeal: true
 categories: [games, puzzle]
 sortOrder: 4
 ---
