@@ -43,13 +43,13 @@ for app_file in "$APPS_DIR"/*.md; do
     # Generate final HTML
     # 1. Strip front matter (sed)
     # 2. Replace title (sed)
-    # 3. Replace placeholders (perl for safety with special chars/HTML)
+    # 3. Replace placeholders (sed with pipe delimiter for safety with HTML)
     FINAL_HTML=$(cat "$PRIVACY_POLICY_LAYOUT" | \
                    sed '/^---$/,/^---$/d' | \
                    sed "s/{{ page.title }}/$APP_TITLE/g" | \
-                   perl -pe "s|\\{\\{ COLLECTION_CONTENT \\}\}|$COLLECTION_CONTENT|g" | \
-                   perl -pe "s|\\{\\{ ANALYTICS_CONTENT \\}\}|$ANALYTICS_CONTENT|g" | \
-                   perl -pe "s|\\{\\{ SERVICE_PROVIDERS \\}\}|$SERVICE_PROVIDERS_CONTENT|g")
+                   sed "s|{{ COLLECTION_CONTENT }}|$COLLECTION_CONTENT|g" | \
+                   sed "s|{{ ANALYTICS_CONTENT }}|$ANALYTICS_CONTENT|g" | \
+                   sed "s|{{ SERVICE_PROVIDERS }}|$SERVICE_PROVIDERS_CONTENT|g")
 
     OUTPUT_DIR="$SITE_DIR/apps/$APP_SLUG/privacy-policy"
     mkdir -p "$OUTPUT_DIR"
