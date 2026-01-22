@@ -20,7 +20,14 @@ for app_file in "$APPS_DIR"/*.md; do
 
     echo "Processing $APP_SLUG (Title: $APP_TITLE, Android: ${ANDROID_APPID:-No}, Appodeal: ${HAS_APPODEAL:-No})"
 
-    # logic for Analytics Content
+    # Logic for Information Collection Content
+    if [ "$HAS_APPODEAL" == "true" ]; then
+        COLLECTION_CONTENT="<p>The app itself does not collect any personal information. All information added to the app resides within the app itself. However, this app uses the Appodeal SDK for advertising, which may collect data. For more details, please refer to the <a href=\"https://appodeal.com/privacy-policy/\">Appodeal Privacy Policy</a>.</p>"
+    else
+        COLLECTION_CONTENT="<p>The app does not collect any information. All information added to the app resides within the app itself.</p>"
+    fi
+
+    # Logic for Analytics Content
     if [ -n "$ANDROID_APPID" ]; then
         ANALYTICS_CONTENT="<p>The current app version and later uses Apple App Analytics (for iOS) and Google Play Services (for Android) to detect crashes and improve stability. These services are covered by their respective privacy policies.</p>"
     else
@@ -40,6 +47,7 @@ for app_file in "$APPS_DIR"/*.md; do
     FINAL_HTML=$(cat "$PRIVACY_POLICY_LAYOUT" | \
                    sed '/^---$/,/^---$/d' | \
                    sed "s/{{ page.title }}/$APP_TITLE/g" | \
+                   perl -pe "s|\\{\\{ COLLECTION_CONTENT \\}\}|$COLLECTION_CONTENT|g" | \
                    perl -pe "s|\\{\\{ ANALYTICS_CONTENT \\}\}|$ANALYTICS_CONTENT|g" | \
                    perl -pe "s|\\{\\{ SERVICE_PROVIDERS \\}\}|$SERVICE_PROVIDERS_CONTENT|g")
 
