@@ -3,6 +3,7 @@ title: Word Haven
 description: Sharpen your mind with fun word puzzles and scenic views!
 icon: word-haven-icon-180.png
 appid: 6736771910
+has_appodeal: true
 categories: games
 sortOrder: 13
 ---
