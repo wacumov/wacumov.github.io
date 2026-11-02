@@ -4,7 +4,7 @@ title: Apps
 ---
 
 <ul class="cards">
-  {% assign sorted_apps = site.apps | sort: "sortOrder" %}
+  {% assign sorted_apps = site.apps | where_exp: "app", "app.unlisted != true" | sort: "sortOrder" %}
   {% for app in sorted_apps %}
     <li class="cards-item">
       <div class="card">
