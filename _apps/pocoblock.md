@@ -6,7 +6,6 @@ appid: 6736466242
 has_appodeal: true
 categories: games
 sortOrder: 12
-unlisted: true
 ---
 # Pocoblock
 

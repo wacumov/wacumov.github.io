@@ -5,9 +5,11 @@ layout: default
 <div class="page-content">
   {{ content }}
   <div class="app-badges">
+    {% if page.appid %}
     <a href="https://apps.apple.com/app/id{{ page.appid }}">
       <img class="app-store-badge" src="/assets/images/app-store-badge.svg" alt="Download on the App Store">
     </a>
+    {% endif %}
     {% if page.android_appid %}
     <a href="https://play.google.com/store/apps/details?id={{ page.android_appid }}">
       <img class="google-play-badge" src="/assets/images/google-play-badge.svg" alt="Get it on Google Play">
