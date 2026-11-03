@@ -1,5 +1,5 @@
 ---
-title: Pocoblock
+title: Pimo Blocks
 description: Relaxing block puzzle with themes to choose from.
 icon: pocoblock-icon-180.png
 appid: 6736466242
@@ -7,7 +7,7 @@ has_appodeal: true
 categories: games
 sortOrder: 12
 ---
-# Pocoblock
+# Pimo Blocks
 
 A calm block puzzle that also trains your mind.
 
