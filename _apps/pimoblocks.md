@@ -1,11 +1,12 @@
 ---
 title: Pimo Blocks
 description: Relaxing block puzzle with themes to choose from.
-icon: pocoblock-icon-180.png
+icon: pimoblocks-icon-180.png
 appid: 6736466242
 has_appodeal: true
 categories: games
 sortOrder: 12
+redirect_from: /apps/pocoblock
 ---
 # Pimo Blocks
 

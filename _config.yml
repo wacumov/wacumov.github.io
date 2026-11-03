@@ -31,3 +31,6 @@ defaults:
       type: "apps"
     values:
       layout: "app"
+
+plugins:
+  - jekyll-redirect-from
